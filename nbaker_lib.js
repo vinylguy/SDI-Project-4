@@ -23,6 +23,23 @@ j = [7, 23, 4, 90, -1, 44, 93];
 console.log(minValue(j));
 
 
+var isValidEmail = function (emailaddress) {
+	var x = emailaddress
+	var atPos = x.indexOf("@");
+	var dotPos = x.lastIndexOf(".");
+		if (atPos<1 || dotPos<atPos+2 || dotPos+2>x.length) {
+			console.log( "This is not a valid e-mail address" );
+			return false;
+			} else {
+			console.log( "This is a valid e-email address" );
+			return true;
+	};
+};
+
+isValidEmail (Vinylguy@Fullsail.edu);
+
+
+
 //String functions
 /*
 var isURL = function () {
@@ -51,11 +68,6 @@ var findDaysDifference = function () {
 
 var isTotalValue = function () {
 
-	return { };
-};
-
-var isSmallestValue = function () {
-	var array1 = [ 3, 6, 11, 23, 34, 60, 70]
 	return { };
 };
 
