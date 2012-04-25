@@ -1,1 +1,65 @@
-alert("JavaScript works!");
+//Nathan Baker
+//Assignment 4
+//SDI 12/04
+//04-24-2012
+
+
+
+//Find the smallest value in an array.
+var minValue = function (array) {
+	min = array[0];
+	for (i=0; i<array.length; i++) {
+		if (array[i]<min) {
+			min = array[i];
+		};
+	};
+return min;
+
+};
+
+var j = new Array();
+j = [7, 23, 4, 90, -1, 44, 93];
+
+console.log(minValue(j));
+
+
+//String functions
+/*
+var isURL = function () {
+
+	return { };
+};
+
+var isValidEmail = function () {
+
+	return { };
+};
+
+var isValidPhoneNumber = function () {
+
+	return { };
+};
+
+//Number functions
+
+var findDaysDifference = function () {
+
+	return { };
+};
+
+//Array functions
+
+var isTotalValue = function () {
+
+	return { };
+};
+
+var isSmallestValue = function () {
+	var array1 = [ 3, 6, 11, 23, 34, 60, 70]
+	return { };
+};
+
+//Array object
+
+[{a:3},{a:2},{a:1},{a:4}]
+*/
