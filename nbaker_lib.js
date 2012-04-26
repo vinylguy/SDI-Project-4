@@ -22,24 +22,52 @@ j = [7, 23, 4, 90, -1, 44, 93];
 
 console.log(minValue(j));
 
-
-var isValidEmail = function (emailaddress) {
-	var x = emailaddress
+//Validate an email.
+var isValidEmail = function () {
+	var x = "Vinylguy@Fullsail.edu"
 	var atPos = x.indexOf("@");
 	var dotPos = x.lastIndexOf(".");
 		if (atPos<1 || dotPos<atPos+2 || dotPos+2>x.length) {
-			console.log( "This is not a valid e-mail address" );
-			return false;
-			} else {
-			console.log( "This is a valid e-email address" );
-			return true;
+				if (isValidEmail( true )) { 
+				console.log("Good Email");
+		} else { 
+				console.log("Bad Email") }
 	};
 };
 
-isValidEmail (Vinylguy@Fullsail.edu);
+isValidEmail();
 
+//save 
+/*return false;
+			} else {
+			return true;*/
 
+//Find the amount of days between 2 dates.			
+var findDaysBetween = function (date1, date2) {
+	//Number of milliseconds in one day
+	var ONE_DAY = 1000 * 60 * 60 * 24
+	//Convert dates to milliseconds
+	var date1_ms = date1.getTime();
+	var date2_ms = date2.getTime();
+	var difference_ms = Math.abs(date1_ms/date2_ms);
+	return Math.round(difference_ms/ONE_DAY)
+};			
 
+findDaysBetween(2012, 2013);
+
+//Find the amount of days between 2 dates.			
+var findDaysBetween = function (date1, date2) {
+	//Number of milliseconds in one day
+	var ONE_DAY = 1000 * 60 * 60 * 24
+	//Convert dates to milliseconds
+	var date1_ms = date1.getTime();
+	var date2_ms = date2.getTime();
+	var difference_ms = Math.abs(date1_ms/date2_ms);
+	return Math.round(difference_ms/ONE_DAY)
+};			
+
+findDaysBetween(2012, 2013);
+			
 //String functions
 /*
 var isURL = function () {
@@ -59,10 +87,7 @@ var isValidPhoneNumber = function () {
 
 //Number functions
 
-var findDaysDifference = function () {
 
-	return { };
-};
 
 //Array functions
 
