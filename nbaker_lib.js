@@ -85,6 +85,17 @@ function isValidNumber (number) {
 
 isValidNumber();
 
+//Change the decimal place on a given number, to a given amount of decimal places.
+
+function changeDecimal(input) {
+	var money = input
+	money.toFixed(2)
+	var output = console.log(money.toFixed(2) + " Is the adjusted value");
+	return output
+};
+
+changeDecimal(2.1);
+
 //String functions
 /*
 var isURL = function () {
