@@ -38,21 +38,19 @@ k = [7, "a", 4, 90, "cat", 44, 93];
 console.log(totValue(k));
 
 //Validate an email.
-var isValidEmail = function () {
-	var x = "Vinylguy@Fullsail.edu"
+function validateEmail (email) {
+	var x = email
 	var atPos = x.indexOf("@");
 	var dotPos = x.lastIndexOf(".");
 		if (atPos<1 || dotPos<atPos+2 || dotPos+2>x.length) {
-			return true;
-				if (isValidEmail( true )) { 
+				/*if (validateEmail( true ))*/ 
 				console.log("Good Email");
 		} else { 
 				console.log("Bad Email");
 		};
-	};
 };
 
-isValidEmail();
+validateEmail("vinylguy@gmail.com");
 
 //Find the amount of days between 2 dates.
 Date.daysBetween = function ( date1, date2 ) {
@@ -66,9 +64,26 @@ Date.daysBetween = function ( date1, date2 ) {
 var startDate = new Date(2012, 3, 20);
 var endDate = new Date(startDate.getFullYear() + startDate.getMonth(), startDate.getDate());
 var today = new Date();
+
 console.log( "Days since" + endDate.toLocaleDateString() + "; "
 			+ Date.daysBetween(startDate, today)
 			);
+
+
+//Validate a phone number in 123-456-7891 sequence.
+
+function isValidNumber (number) {
+	var testNum = number
+	var phFormat = /^([0-9]{3})[-]?([0-9]{3})[-]?([0-9]{4})$/;
+	if (phFormat.test(testNum)) {
+		console.log("This appears to be a valid phone number");
+	} else {
+		console.log("This number appears invalid");
+	};
+
+};
+
+isValidNumber();
 
 //String functions
 /*
@@ -86,12 +101,7 @@ var isValidPhoneNumber = function () {
 
 
 
-//Array functions
 
-var isTotalValue = function () {
-
-	return { };
-};
 
 //Array object
 
